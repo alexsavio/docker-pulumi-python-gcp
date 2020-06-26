@@ -18,7 +18,7 @@ RUN export SDK_FILENAME=google-cloud-sdk-${GCP_SDK_VERSION}-linux-x86_64.tar.gz 
 RUN if [ "$PULUMI_VERSION" = "latest" ]; then \
     curl -fsSL https://get.pulumi.com/ | bash; \
   else \
-    curl -fsSL https://get.pulumi.com/ | bash -s -- --version $PULUMI_VERSION \
+    curl -fsSL https://get.pulumi.com/ | bash -s -- --version $PULUMI_VERSION; \
   fi && \
   mv ~/.pulumi/bin/* /usr/bin
 
