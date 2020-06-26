@@ -15,5 +15,6 @@ RUN export SDK_FILENAME=google-cloud-sdk-${GCP_SDK_VERSION}-linux-x86_64.tar.gz 
     gcloud config set component_manager/disable_update_check true
 
 RUN curl -fsSL https://get.pulumi.com | sh
+ENV PATH="${HOME}/.pulumi/bin:${PATH}"
 
 ENTRYPOINT ["pulumi"]
