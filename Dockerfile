@@ -1,7 +1,7 @@
 FROM python:3.7-slim-buster
 
 ARG GCP_SDK_VERSION=297.0.1
-ARG PULUMI_VERSION=latest
+ARG PULUMI_VERSION=2.5.0
 
 RUN apt-get update && \
     apt-get install -y git ssh curl && \
